@@ -163,7 +163,7 @@ table {
   }
   @media(max-width: 890px){
     .header-container{
-        padding-inline: 40px;
+        padding-inline: 20px;
         padding-top: 20px;
         flex-wrap: wrap;
     }
@@ -179,18 +179,18 @@ table {
   }
   @media(max-width: 555px){
     .div-header-logo{
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .header-menu__list{
-      margin-bottom: 10px;
-    }
-    .header-container{
-        
-
+      margin-bottom: 20px;
     }
     .header-menu{
         flex-direction: column;
         align-items: start;
+    }
+    .header-action{
+      display: flex;
+      gap: 50px;
     }
   }
 @media(max-width: 385px){
@@ -237,13 +237,13 @@ table {
   }
   @media(max-width: 890px){
     .tittle-info{
-      padding-left: 40px;
+      padding-left: 20px;
     }
     .tittle-info__heading{
       margin-bottom: 20px;
     }
     .tittle-info__paragraph{
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
   @media(max-width: 921px){
@@ -252,10 +252,14 @@ table {
       flex-direction: column;
       align-items: start;
     }
+    .tittle-info__heading{
+      font-size:21px;
+    }
   }
   @media(max-width: 1083px){
     .tittle-image{
       width: 50%;
       height: 50%;
+      padding-left: 40px;
     }
   }
