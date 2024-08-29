@@ -426,3 +426,96 @@ button:active{
     .foto-artist__link{
       padding-bottom: 20px;
     }
+
+    .story-section{
+      padding: 240px 240px 120px 40px;
+    }
+    .story-heading{
+      display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    .story-heading__gray{
+      color: #a8a8a8;;
+    }
+
+    .story-item{
+      display: flex;
+    }
+    .story-item-section{
+      display: flex;
+      padding: 60px;
+      background-color: #222;
+      gap: 40px;
+  }
+    .story-item__option{
+      display: flex;
+      flex-direction: column;
+      width: 282px;
+    }
+
+    .story-option__link{
+      display: flex;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      padding-left: 28px;
+      font-family: "DM Mono", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      white-space: nowrap;
+      
+    }
+    .story-option__link_active{   /* не сработал двойной класс?*/
+      background: #222;
+      display: flex;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      padding-left: 28px;
+      font-family: "DM Mono", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      white-space: nowrap;
+    }
+
+    .story-item-contents__heading_heading{
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 32px;
+    }
+    .story-item-contents__heading_heading::before{
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 93px;
+      background-color: var(--color-green);
+      left: 0px;
+    }
+    .story-item-contents__paragraph{
+      margin-bottom: 17px;
+      font-size: 16px;
+      line-height: 160%;
+    }
+    @media(max-width:1024px){
+      .story-section{
+        padding: 120px 0 120px 20px;
+      }
+      .story-item{
+        flex-direction: column;
+      }.story-item__option{
+        flex-direction: row;
+      }
+      .story-option__link{
+        padding: 15px 10px;
+      }
+      .story-option__link_active{
+        padding: 15px 10px;
+      }
+    }
+    @media(max-width:589px){
+      .story-item-section{
+        padding: 10px;
+        flex-direction: column;
+      }
+    }
