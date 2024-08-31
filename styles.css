@@ -80,7 +80,7 @@ table {
   }
   body{
     font-family: var(--font-family-base);
-    background-color: var(--color-fill);
+    
   }
   a{
     color: var(--color-light); 
@@ -137,6 +137,9 @@ button:active{
     color: var(--color-green);
     text-transform: none;
 
+  }
+  h6{
+    font-family: "DM Mono", sans-serif;
   }
   p{
     font-family: "Inter", sans-serif;
@@ -363,8 +366,11 @@ button:active{
     .promo-info{
       margin-left: 20px
     }
+    .promo-label{
+      padding-left: 40px;
+    }
     .promo-label__heading{
-      padding-left: 20px;
+      padding-left: 66px;
       margin-bottom: 20px;
       
     }
@@ -386,7 +392,8 @@ button:active{
       display: flex;
       justify-content: space-between;
       gap:10px;
-      padding: 120px 20px;
+      padding: 120px 0px;
+      background-color: var(--color-fill);
     }
     @media(max-width:921px){
       .wrapper-artist__heading{
@@ -401,8 +408,8 @@ button:active{
     }
     @media(max-width:589px){
       .artist-container{
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding: 50px 20px 20px;
+       
       }
       .h_2{
         display: none;
@@ -447,6 +454,7 @@ button:active{
       padding: 60px;
       background-color: #222;
       gap: 40px;
+      z-index: 3;
   }
     .story-item__option{
       display: flex;
@@ -514,8 +522,159 @@ button:active{
       }
     }
     @media(max-width:589px){
+      .story-section{
+
+      }
       .story-item-section{
         padding: 10px;
         flex-direction: column;
       }
     }
+
+    .poster-container{
+      
+      
+      
+    }
+
+    .roadmap-container{
+      display: flex;
+      justify-content: center;
+      padding: 120px 0px 240px 0px;
+    }
+    .roadmap-section{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .roadmap-heading{
+      margin-bottom: 61px;
+    }
+    .roadmap-sector{
+      display: flex;
+      flex-direction: column;
+      padding: 45px 90px;
+      position: relative;
+      z-index: 1;
+    }
+    .roadmap-sector-item{
+      display: flex;
+      flex-direction: column;
+      border: var(--border);
+    }
+    .roadmap-s-margin{
+      margin-bottom: 145px;
+    }
+    .roadmap-sector-item__heading{
+      display: flex;
+      padding-left: 12px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      background-color: #222;
+      border: var(--border);
+      z-index: 3;
+    }
+    .roadmap-sector-item__heading_1{
+      display: flex;
+      flex-direction: column;
+      background-color: #222;
+    }
+    .roadmap-heading-header{
+      position: relative;
+      font-size: 8px;
+      letter-spacing: 0.12em;
+      color: var(--color-green);
+      margin-bottom: 1px;
+    }
+    .roadmap-heading-header::after{
+      content: "";
+      
+    }
+    .roadmap-paragraph-header{
+      font-family: "DM Mono", sans-serif;
+      font-size: 16px;
+      line-height: 173%;
+      text-transform: uppercase;
+    }
+    .roadmap-sector-content{
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 12px;
+      background-color: #222;
+      z-index: 3;
+      flex-wrap: wrap ;
+
+    }
+    .roadmap-sector-content__item{
+      display: flex;
+      flex-direction: column;
+      width: 310px;
+      gap: 16px;
+      margin-right: 75px;
+    }
+    .roadmap-sector-content__paragraph{
+      font-size: 11px;
+      line-height: 250%;
+      letter-spacing: 0.4px;
+    }
+    .abz{
+      padding-left: 22px;
+    }
+    .roadmap-heading-svg{
+      margin-right: 12px;
+    }
+    .roadmap-sector::before{
+      content: url(./images/hipno.svg);    
+      position: absolute;
+      left: -336px;
+      top: -336px;
+      z-index: 2;
+   }
+   .roadmap-sector::after{
+    content: url(./images/hipno.svg);    
+    position: absolute;
+    right: -336px;
+    top: 160px;
+    z-index: 2;
+  }
+  .liniya-green-one{
+    position: relative;
+  }
+  .liniya-green-one::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background-color:var(--color-green);
+    right: 257px;
+    bottom: -120px;
+  }
+  .roadmap-circe{
+    position: relative;
+  }
+  .roadmap-circe::after{
+    content: url(./images/hipno.svg);
+    position: absolute;
+    left: -426px;
+    bottom: -288px;
+  }
+@media(max-width:921px){
+  .roadmap-container{
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+  .roadmap-sector{
+    padding: 20px 20px;
+  }
+  .roadmap-s-margin{
+    margin-bottom: 40px;
+  }
+  .roadmap-sector-content__item{
+    margin: 0;
+  }
+
+  .roadmap-heading{
+    margin-bottom: 20px;
+  }
+}
