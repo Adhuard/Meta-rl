@@ -140,6 +140,7 @@ button:active{
   }
   h6{
     font-family: "DM Mono", sans-serif;
+    
   }
   p{
     font-family: "Inter", sans-serif;
@@ -531,12 +532,6 @@ button:active{
       }
     }
 
-    .poster-container{
-      
-      
-      
-    }
-
     .roadmap-container{
       display: flex;
       justify-content: center;
@@ -587,10 +582,7 @@ button:active{
       color: var(--color-green);
       margin-bottom: 1px;
     }
-    .roadmap-heading-header::after{
-      content: "";
-      
-    }
+  
     .roadmap-paragraph-header{
       font-family: "DM Mono", sans-serif;
       font-size: 16px;
@@ -628,7 +620,7 @@ button:active{
       content: url(./images/hipno.svg);    
       position: absolute;
       left: -336px;
-      top: -336px;
+      top: -336px; /* половина размера что бы подвинуть ровно на половину*/
       z-index: 2;
    }
    .roadmap-sector::after{
@@ -641,7 +633,7 @@ button:active{
   .liniya-green-one{
     position: relative;
   }
-  .liniya-green-one::after{
+  .liniya-green-one::after{ /* добавил пустой див только для линии (линия берет начало с учетом паддингов)*/
     content: "";
     position: absolute;
     width: 1px;
@@ -677,4 +669,92 @@ button:active{
   .roadmap-heading{
     margin-bottom: 20px;
   }
+}
+
+.partners-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partners-heading{
+  margin-bottom: 50px;
+}
+.partners-heading__heading{
+  color: var(--color-green);
+}
+.partner-section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 85px;
+  row-gap: 60px;
+}
+
+.survey-sector-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+.survey-info-heading{
+  display: flex;
+  flex-direction: column;
+}
+.survey-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 245px 181px 115px 99px;
+}
+.survey-sector-survey{
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+  max-height: 545px;
+  background-color: #222;
+  padding-inline: 30px;
+ 
+}
+.survey-block__heading{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.survey-heading{
+  text-transform: none;
+  font-size: 16px;
+}
+.survey-paragraph{
+  font-size: 12px;
+  line-height: 160%;
+  color: #c4c4c4
+}
+.survey-block__paragraph{
+  padding-bottom: 30px;
+  max-height: 40px;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar { /*убрал полосу прокрутки*/
+  width: 0;
+}
+@media(max-width: 1278px){
+  .survey-section{
+    padding-inline: 50px;
+  }
+  .survey-block__heading{
+    padding: 15px 0;
+  }
+}
+@media(max-width:921px){
+  .survey-section{
+    padding-inline: 20px;
+    padding-top: 120px;
+  }
+}
+@media(max-width:740px){
+  .survey-section{
+    flex-direction: column;
+  }
+
 }
