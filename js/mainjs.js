@@ -1,11 +1,64 @@
 $(document).ready(function () {
-    $(".wrapper").slick({
-        slidesToShow: 2,
+    $(".team-slider-wrapper").slick({
+        autoplay: true,
+        slidesToShow: 3,
         slidesToScroll: 1,
         Infinity: true,
         centerMode: true,
-        centerPadding: "20px", /* отступ от 3х уже видимых слайдов*/
+      
+        arrows: false,
+        autoplaySpeed: 1500,
+        centerPadding: "0px", /* отступ от 3х уже видимых слайдов*/
+        responsive: [
+        {
+            breakpoint: 920,
+            settings:
+            {
+                slidesToShow: 2,
+                centerPadding: "0px"
+            },
+        },
+        
+        {            
+            breakpoint: 600,
+            settings:
+            {
+                slidesToShow: 1,
+                centerPadding: "0px"
+            },
+        
+        }
+        
+        ]
+
     })
-    $(".slick-prev").text(">");
-    $(".slick-next").text(">");
+
+})
+
+$(document).ready(function () {
+    $(".artist-container").slick({
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        Infinity: true,
+        centerMode: true,
+        arrows: false, /*скрыл стрелки*/
+        autoplaySpeed: 1000,
+        centerPadding: "0px", /* отступ от 3х уже видимых слайдов*/
+        responsive: [
+            {
+                breakpoint: 1220,
+                settings:{
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings:{
+                slidesToShow: 1,
+                }
+            }
+        ]
+    })
+
 })

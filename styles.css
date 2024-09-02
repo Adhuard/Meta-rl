@@ -628,6 +628,7 @@ button:active{
     position: absolute;
     right: -336px;
     top: 160px;
+
     z-index: 2;
   }
   .liniya-green-one{
@@ -651,6 +652,14 @@ button:active{
     left: -426px;
     bottom: -288px;
   }
+
+
+  @media(max-width:1440px){
+  .roadmap-sector::after{
+    right: -10vw;
+  }
+  }
+
 @media(max-width:921px){
   .roadmap-container{
     padding-top: 0px;
@@ -668,6 +677,9 @@ button:active{
 
   .roadmap-heading{
     margin-bottom: 20px;
+  }
+  .roadmap-sector::after{
+    right: 0vw;
   }
 }
 
@@ -751,6 +763,10 @@ button:active{
     padding-inline: 20px;
     padding-top: 120px;
   }
+  .survey-logo-image{
+    width: 320px;
+    height: 320px;
+  }
 }
 @media(max-width:740px){
   .survey-section{
@@ -758,3 +774,9 @@ button:active{
   }
 
 }
+
+.team-slider-wrapper{
+  display: flex;
+  padding-inline: 20px;
+}
+
