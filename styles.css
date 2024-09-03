@@ -84,13 +84,13 @@ table {
   }
   a{
     color: var(--color-light); 
-    text-decoration: none; /* Убираем подчёркивание */
-    background-color: transparent; /* Фон прозрачный, чтобы не выделяться */
-    cursor: pointer; /* Оставляем указатель, чтобы было понятно, что ссылка кликабельна */
+    text-decoration: none; 
+    background-color: transparent; 
+    cursor: pointer; 
   }
 @media(hover:hover){
   a:hover{
-    color: var(--color-gray);   /* сделал ховер активным только в декстоп версии*/
+    color: var(--color-gray);
   }
   button:hover{
     color: var(--color-gray);
@@ -126,6 +126,9 @@ button:active{
   }
   h1{
     font-size: 79px;  
+  }
+  h2{
+    font-size: 51px;
   }
   h3{
     font-size: 38px;
@@ -259,7 +262,6 @@ button:active{
     padding-top: 21px;
   }
   .tittle-info__heading{
-    font-size: 51px;
     line-height: 119%;
     text-transform: uppercase;
     margin:0 0 43px 0;
@@ -342,7 +344,7 @@ button:active{
     width: 2px;
     height: 124px;
     background-color: var(--color-green);
-    left: -22px; /* левая стороноа (изначально стоит у элемента, -22пкс отодвинулась от элемента в лево на 22 пкс(если просто 22пкс, будет находиться на элементе от начала 22пкс))*/
+    left: -22px;
   }
   .promo-info__paragraph{
     font-size: 16px;
@@ -475,7 +477,7 @@ button:active{
       white-space: nowrap;
       
     }
-    .story-option__link_active{   /* не сработал двойной класс?*/
+    .story-option__link_active{
       background: #222;
       display: flex;
       padding-top: 28px;
@@ -620,7 +622,7 @@ button:active{
       content: url(./images/hipno.svg);    
       position: absolute;
       left: -336px;
-      top: -336px; /* половина размера что бы подвинуть ровно на половину*/
+      top: -336px;
       z-index: 2;
    }
    .roadmap-sector::after{
@@ -634,7 +636,7 @@ button:active{
   .liniya-green-one{
     position: relative;
   }
-  .liniya-green-one::after{ /* добавил пустой див только для линии (линия берет начало с учетом паддингов)*/
+  .liniya-green-one::after{
     content: "";
     position: absolute;
     width: 1px;
@@ -747,7 +749,7 @@ button:active{
   overflow: scroll;
 }
 
-::-webkit-scrollbar { /*убрал полосу прокрутки*/
+::-webkit-scrollbar { 
   width: 0;
 }
 @media(max-width: 1278px){
@@ -777,6 +779,164 @@ button:active{
 
 .team-slider-wrapper{
   display: flex;
-  padding-inline: 20px;
+  padding-inline: px;
 }
 
+.team-section{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 120px 140px;
+}
+.team-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 19px;
+}
+.team-card__item{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  gap: 20px;
+}
+.team-card-social{
+  display: flex;
+  gap: 12px;
+}
+.team-card__name{
+  font-family: "DM Mono", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+.team-card__position{
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  color: var(--color-green);
+}
+.team-card__paragraph{
+  text-align: center;
+  font-size: 12px;
+  line-height: 160%;
+}
+@media(max-width:930px){
+  .team-section{
+    padding-inline: 20px;
+    padding-top: 40px;
+    gap: 50px;
+  }
+}
+
+.discord-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 116px 136px;
+
+}
+.discord-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 349px;
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+.discord-info__heading_light{
+  margin-bottom: 10px;
+}
+.discord-info__heading_green{
+  color: var(--color-green);
+}
+.discord-info__paragraph{
+  font-size: 16px;
+  line-height: 160%;
+}
+.discord-info__link{
+  position: relative;
+  font-family: "DM Mono", sans-serif;
+  font-size: 16px;
+  color: var(--color-fill);
+  padding: 14px 31px 13px 61px;
+  background-color: var(--color-green);
+}
+.discord-info__link::before{
+  content: url(./images/discord-svg.svg);
+  position: absolute;
+  left: 32px;
+  bottom: 3px;
+}
+@media(max-width:1155px){
+  .discord-image{
+    display: flex;
+    order: -1;
+    margin-bottom: 40px;
+  }
+  .discord-image_img{
+    width: 200px;
+    height: 200px;
+  }
+}
+@media(max-width:930px){
+  .discord-section{
+    padding: 20px;
+  }
+  .discord-info{
+    height: 250px;
+  }
+}
+
+.footer-section{
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #42006a;;
+}
+.footer-logo-sector{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 64px;
+}
+.footer-logo__paragraph{
+  font-family: "DM Mono", sans-serif;
+  font-size: 13px;
+}
+.footer-menu-sector{
+  display: flex;
+  gap:100px;
+
+}
+.footer-menu__item{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-menu__link{
+  font-family: "DM Mono", sans-serif;
+  font-size: 16px;
+}
+.footer-menu-actions{
+  display: flex;
+  gap:12px;
+}
+@media(max-width: 1180px){
+  .footer-menu-sector{
+    gap: 50px
+  }
+}
+@media(max-width: 1030px){
+  .footer-section{
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+  .footer-logo-sector{
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 600px){
+  .footer-menu-sector{
+    flex-wrap: wrap;
+  }
+}

@@ -8,7 +8,7 @@ $(document).ready(function () {
       
         arrows: false,
         autoplaySpeed: 1500,
-        centerPadding: "0px", /* отступ от 3х уже видимых слайдов*/
+        centerPadding: "0px",
         responsive: [
         {
             breakpoint: 920,
@@ -42,9 +42,9 @@ $(document).ready(function () {
         slidesToScroll: 1,
         Infinity: true,
         centerMode: true,
-        arrows: false, /*скрыл стрелки*/
+        arrows: false,
         autoplaySpeed: 1000,
-        centerPadding: "0px", /* отступ от 3х уже видимых слайдов*/
+        centerPadding: "0px", 
         responsive: [
             {
                 breakpoint: 1220,
